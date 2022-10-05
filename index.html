@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Page - FantacyDesigns</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="product-card">
+      <h1>Best Shoes</h1>
+      <p>Lorem ipsum, or lipsum as it is sometimes known</p>
+      <div class="product-pic"></div>
+      <div class="product-colors">
+        <span class="blue active" data-color="#7ed6df" data-pic="url(https://tse4.explicit.bing.net/th?id=OIP.T-c-jh8-qC2bqSZVFnCUzwHaHa&pid=Api&P=0)"></span>
+        <span class="green" data-color="#badc58" data-pic="url(https://tse3.explicit.bing.net/th?id=OIP.uD6VUDtOW7pQdKDHrclTcAHaHa&pid=Api&P=0)"></span>
+        <span class="yellow" data-color="#f9ca24" data-pic="url(https://tse3.explicit.bing.net/th?id=OIP.6NgitbrRXd-cg6ChjC8GIAHaE8&pid=Api&P=0)"></span>
+        <span class="rose" data-color="#ff7979" data-pic="url(https://tse3.explicit.bing.net/th?id=OIP.F856va34CLMKDe13VrLkOgHaE8&pid=Api&P=0)"></span>
+      </div>
+      <div class="product-info">
+        <div class="product-price">$1000</div>
+        <a href="#" class="product-button">Add to Cart</a>
+      </div>
+    </div>
+ 
+    <script>
+      $(".product-colors span").click(function(){
+        $(".product-colors span").removeClass("active");
+        $(this).addClass("active");
+        $("body").css("background",$(this).attr("data-color"));
+        $(".product-price").css("color",$(this).attr("data-color"));
+        $(".product-button").css("color",$(this).attr("data-color"));
+        $(".product-pic").css("background-image",$(this).attr("data-pic"));
+      });
+    </script>
+  </body>
+</html>
